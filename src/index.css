@@ -1,0 +1,229 @@
+/* import font family */
+/* 
+primary color: #27272a
+primary hover: #3b3c3f
+
+orange-color: #db6400
+
+text color: #2c2d2f
+
+overlay: 0 0 40px rgba(0, 0, 0, 0.2)
+*/
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* HELVETICA NEUE */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* UltraLight (100) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueUltraLight.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueUltraLightItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Thin (200) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueThin.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueThinItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueLightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Normal/Regular (400) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("./assets/font/helvetica-neue/HelveticaNeueThin.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Heavy (800) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-HeavyItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black (900) */
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("/fonts/MinhaFonte-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* GLOBAL SETTING */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Body styling */
+body {
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+}
+/* Header styling */
+h1,
+h2 {
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+/* Remove default list styles */
+ul {
+  list-style: none;
+}
+/* Remove underline from links */
+a {
+  text-decoration: none;
+  color: #27272a;
+}
+p {
+  line-height: 1.5;
+}
+/* visible and hidden elements */
+.is__visible {
+  display: block;
+}
+.is__hidden {
+  display: none;
+}
+.menu__visible {
+  right: 0;
+}
+.menu__hidden {
+  right: -350px;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    padding: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+}
