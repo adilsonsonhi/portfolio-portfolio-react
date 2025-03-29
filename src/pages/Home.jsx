@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Carousel from "../components/Carousel";
+import Hero from "../components/Hero/Hero";
+import Carousel from "../components/Carousel/Carousel";
 import { products } from "../assets/assets"; // Importando os produtos
-import Services from "../components/Services";
-import MainSkills from "../components/Mainskills";
+import Services from "../components/MyServices/Services";
+import MainSkills from "../components/Skills/MainSkills";
 
 const Home = () => {
   return (

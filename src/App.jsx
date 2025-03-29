@@ -8,8 +8,8 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import SourceCode from "./pages/SourceCode";
 // COMPONENTS
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import NavHeader from "./components/Header/NavHeader";
+import Footer from "./components/Footer/Footer";
 // ----------------
 // STARTING PROGRAM
 // ----------------
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div className="app-container">
       {/* NAV BAR */}
-      <NavBar />
+      <NavHeader />
       {/* ROUTE PAGES */}
       <Routes>
         <Route path="/" element={<Home />} />
