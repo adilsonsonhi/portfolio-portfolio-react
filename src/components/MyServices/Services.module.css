@@ -45,7 +45,9 @@
 .services__container {
   padding: 80px 0;
   margin: 0 auto;
-  max-width: 910px;
+  /* max-width: 910px; */
+  max-width: 1240px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,60 +55,24 @@
 }
 
 .services__container h2 {
-  opacity: 0; /* Inicialmente invisível */
-  font-size: 30px;
   text-align: center;
+  opacity: 0; /* Inicialmente invisível */
 }
-.services__text {
+.services__description {
   opacity: 0; /* Inicialmente invisível */
 }
 .services {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 372px);
+  gap: 20px;
   opacity: 0; /* Inicialmente invisível */
+  /* background-color: red; */
 
   & img {
+    /* transition: 0.5s;
     width: 100%;
-    /* height: 100%; */
+    filter: grayscale(1); */
   }
-}
-
-.services__left,
-.services__right {
-  padding: 8px;
-  border-radius: 16px;
-  border: 1px solid #eee;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  opacity: 0; /* Inicialmente invisível */
-}
-
-.services__buttons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0; /* Inicialmente invisível */
-}
-
-.services__buttons a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  img {
-    width: 22px;
-  }
-}
-
-.services__buttons a:first-child {
-  height: 44.01px;
-  padding: 12px 24px;
-  color: #fff;
-  background-color: #27272a;
-  border: 1px solid #27272a;
-  border-radius: 32px;
 }
 
 @media only screen and (max-width: 768px) {

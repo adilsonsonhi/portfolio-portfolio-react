@@ -42,21 +42,16 @@
 }
 
 .mainskills {
-  max-width: 910px;
+  max-width: 1240px;
   width: 100%;
-  margin: 40px auto;
+  margin: 80px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
 }
 .mainskills h2 {
-  font-size: 40px;
-  /* font-weight: 500; */
-  /* color: #fff;
-  -webkit-text-stroke: 1px #ccc;  */
-  color: #27272a;
-  font-size: 20px;
+  font-size: 24px;
   opacity: 0; /* Inicialmente invisível */
 }
 .mainskills ul {
@@ -69,17 +64,20 @@
   opacity: 0; /* Inicialmente invisível */
 
   & li {
-    padding: 8px 16px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     border-radius: 32px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    /* cursor: pointer; */
-    /* transition: 0.3s; */
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
 
     &:hover {
-      /* transform: translateY(-10px); */
+      transform: translateY(-4px);
+    }
+
+    & span {
+      padding-top: 4px;
     }
   }
 }

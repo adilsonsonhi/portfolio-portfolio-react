@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./NavHeader.module.css";
+import Button from "../Button/Button";
 
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
@@ -85,10 +86,13 @@ const NavBar = () => {
         <nav className={styles.nav__container}>
           <ul className={styles.nav__list}>
             <li className={styles.nav__list__item}>
-              <NavLink className={styles.contact__button} to="https://wa.me/+351933617279" target="blank">
+              {/* <NavLink className={styles.contact__button} to="https://wa.me/+351933617279" target="blank">
                 <span>Let's talk</span>
                 <img src={assets.row} alt="" />
-              </NavLink>
+              </NavLink> */}
+              <Button.Link to="/contact" variant="primary" size="md" icon="row" iconPosition="right">
+                <span>Let's Chat</span>
+              </Button.Link>
             </li>
 
             <li onClick={() => setVisible(true)} className={styles.nav__list__item}>

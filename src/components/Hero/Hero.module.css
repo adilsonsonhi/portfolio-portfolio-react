@@ -55,21 +55,21 @@
 
   & a {
     /* height: 44.01px !important; */
-    padding: 12px 24px;
+    /* padding: 12px 24px;
     padding: 17px 34px;
     display: inline-block;
     border-radius: 32px;
     font-size: 18px;
     letter-spacing: -0.5px;
-    font-weight: 400;
+    font-weight: 400; */
   }
 }
 /* PRIMARY BTN */
 .primary__btn {
-  color: #fff;
+  /* color: #fff;
   background-color: #27272a;
   border: 1px solid #27272a;
-  transition: 0.3s;
+  transition: 0.3s; */
 
   &:hover {
     background-color: #3b3c3f;
@@ -77,13 +77,13 @@
 }
 /* SECONDARY BTN */
 .secondary__btn {
-  color: #27272a;
+  /* color: #27272a;
   border: 1px solid #dadadd;
   background-color: transparent;
-  transition: 0.3s;
+  transition: 0.3s; */
 
   &:hover {
-    border-color: #27272a;
+    /* border-color: #27272a; */
   }
 }
 

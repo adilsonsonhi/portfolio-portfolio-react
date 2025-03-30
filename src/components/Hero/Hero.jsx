@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Hero.module.css";
 import { assets } from "../../assets/assets";
+import Button from "../Button/Button";
 
 const Hero = () => {
   return (
@@ -14,6 +15,7 @@ const Hero = () => {
           </span>
         </div>
         <h1>Building Concepts into Seamless Digital Experiences</h1>
+
         <p>
           With 6+ years of experience, I build web applications and craft impactful designs. Connect with me on{" "}
           <NavLink to="https://www.linkedin.com/in/adilsonsonhi/" target="blank">
@@ -27,14 +29,14 @@ const Hero = () => {
         </p>
         <ul className={styles.btn__list}>
           <li>
-            <NavLink className={styles.primary__btn} to="https://wa.me/+351933617279" target="blank">
+            <Button.Link to="/contact" variant="primary" size="lg">
               <span>Get Started Now</span>
-            </NavLink>
+            </Button.Link>
           </li>
           <li>
-            <NavLink className={styles.secondary__btn} to="/portfolio">
-              Explore Portfolio
-            </NavLink>
+            <Button.Link to="/portfolio" variant="secondary" size="lg">
+              <span>Explore Portfolio</span>
+            </Button.Link>
           </li>
         </ul>
       </div>

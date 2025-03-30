@@ -10,8 +10,8 @@ const Home = () => {
     <div>
       <Hero />
       <Carousel products={products} />
-      <MainSkills />
       <Services />
+      <MainSkills />
     </div>
   );
 };

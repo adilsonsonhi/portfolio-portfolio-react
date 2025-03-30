@@ -152,25 +152,6 @@
     }
   }
 }
-.contact__button {
-  height: 36px;
-  padding: 10px 20px;
-  border-radius: 32px;
-  background-color: #27272a;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: 0.3s;
-
-  &:hover {
-    background-color: #3b3c3f;
-  }
-
-  span {
-    color: #fff;
-    font-size: 14px;
-  }
-}
 
 .menu__button {
   width: 44px;
