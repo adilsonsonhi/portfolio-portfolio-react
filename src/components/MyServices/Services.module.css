@@ -51,22 +51,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 64px;
+}
+
+.services__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
 }
 
 .services__container h2 {
-  text-align: center;
+  max-width: 540px;
   opacity: 0; /* Inicialmente invisível */
 }
 .services__description {
+  max-width: 450px;
   opacity: 0; /* Inicialmente invisível */
 }
 .services {
   display: grid;
-  grid-template-columns: repeat(3, 372px);
+  grid-template-columns: repeat(2, 372px);
   gap: 20px;
   opacity: 0; /* Inicialmente invisível */
-  /* background-color: red; */
 
   & img {
     /* transition: 0.5s;

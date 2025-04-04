@@ -1,26 +1,41 @@
 import React from "react";
-import style from "../Card/ServiceCard.module.css";
-import { assets } from "../../assets/assets";
+import styles from "../Card/ServiceCard.module.css";
+import { servicesArray } from "../../assets/assets";
 
-const ServiceCard = () => {
+const ServiceCard = ({ id }) => {
+  const service = servicesArray.find((item) => item._id === id);
+
+  if (!service) {
+    return <div>Service not found</div>;
+  }
+
   return (
-    <div className={style.service__card}>
-      <div className={style.service__container}>
-        <img className={style.service__image} src={assets.service1} alt="" />
-        <ul>
-          <li>
-            <img className={style.service__icon} src={assets.circle_react} alt="" />
-          </li>
-          <li>
-            <img className={style.service__icon} src={assets.circle_nodejs} alt="" />
-          </li>
-          <li>
-            <img className={style.service__icon} src={assets.circle_mongodb} alt="" />
-          </li>
-        </ul>
+    <div className={styles.service__card}>
+      {/* Imagem do serviço - pegamos o primeiro item do array image */}
+      <div className={styles.service__container}>
+        <img className={styles.service__image} src={service.image[0]} alt={`${service.name} illustration`} />
+        <div className={styles.service__list}>
+          {/* Icons de tecnologias */}
+          {service.techs.map((techPath, index) => (
+            <div key={index} className={styles.service__listitem}>
+              <img src={techPath} alt="Tech icon" />
+            </div>
+          ))}
+        </div>
       </div>
-      <h3>Web Systems</h3>
-      <p>Performance that converts. Landing pages optimized for maximum conversion, with design focused on quick results.</p>
+
+      <div>
+        <h3>{service.name}</h3>
+        <p>{service.description}</p>
+      </div>
+
+      {/* <div className="tech-stack">
+        {service.techs.map((techPath, index) => (
+          <div key={index} className="tech-icon">
+            <img src={techPath} alt="Tech icon" />
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 };

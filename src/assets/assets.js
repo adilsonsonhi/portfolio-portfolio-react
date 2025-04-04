@@ -72,11 +72,28 @@ export const assets = {
   service1,
   service2,
   figma,
-  circle_figma,
-  circle_react,
-  circle_nodejs,
-  circle_mongodb,
+  // circle_figma,
+  // circle_react,
+  // circle_nodejs,
+  // circle_mongodb,
 };
+
+export const servicesArray = [
+  {
+    _id: "1",
+    name: "Web Systems",
+    description: "Robust, scalable solutions. Complete web systems with seamless API REST integration for optimal efficiency and performance.",
+    image: [service1],
+    techs: [circle_react, circle_nodejs, circle_mongodb],
+  },
+  {
+    _id: "2",
+    name: "Interface Design (UX/UI)",
+    description: "Engaging user experiences. Intuitive, functional interfaces that provide smooth and engaging navigation.",
+    image: [service2],
+    techs: [circle_figma],
+  },
+];
 
 export const products = [
   {
