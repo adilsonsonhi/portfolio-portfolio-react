@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel/Carousel";
 import { products } from "../assets/assets"; // Importando os produtos
 import Services from "../components/MyServices/Services";
 import MainSkills from "../components/Skills/MainSkills";
+import Features from "../components/Features/Features";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Carousel products={products} />
       <Services />
       <MainSkills />
+      <Features />
     </div>
   );
 };

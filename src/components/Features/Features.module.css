@@ -1,0 +1,136 @@
+.features__container {
+  padding: 80px 0;
+  margin: 0 auto;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+.features__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+
+  & h2 {
+    max-width: 540px;
+  }
+
+  & p {
+    max-width: 450px;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ----------------- */
+.webdev__features h5,
+.uxui__features h5 {
+  position: relative;
+}
+
+.webdev__features span,
+.uxui__features span {
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #f7f7f8;
+  border: 4px solid #db6400;
+  border-radius: 100%;
+}
+
+.webdev__features > div > div:first-child {
+  background-color: #db6400;
+
+  & h5 {
+    color: #f7f7f8;
+  }
+
+  & p {
+    color: #eeeef0;
+  }
+}
+
+.webdev__features > div > div:first-child span {
+  background-color: #db6400;
+  border-color: #fff;
+}
+
+/* ----------------- */
+.webdev__features > div > div,
+.uxui__features > div > div {
+  position: relative;
+}
+
+.webdev__features > div > div img,
+.uxui__features > div > div img {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /* display: none; */
+}
+
+/* ----------------- */
+.webdev__features,
+.uxui__features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    & div {
+      gap: 8px;
+    }
+  }
+
+  & h5 {
+    padding-left: 32px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto;
+    -webkit-line-clamp: 1;
+  }
+
+  & p {
+    padding-left: 32px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* .features > div:first-child {
+  background-color: #db6400 !important;
+}
+
+.features div:first-child h5 {
+  color: #f7f7f8;
+}
+.features div:first-child .span {
+  background-color: #db6400;
+  border-color: #fff;
+}
+
+.features div:first-child p {
+  color: #eeeef0;
+} */

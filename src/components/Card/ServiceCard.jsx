@@ -28,14 +28,6 @@ const ServiceCard = ({ id }) => {
         <h3>{service.name}</h3>
         <p>{service.description}</p>
       </div>
-
-      {/* <div className="tech-stack">
-        {service.techs.map((techPath, index) => (
-          <div key={index} className="tech-icon">
-            <img src={techPath} alt="Tech icon" />
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };
