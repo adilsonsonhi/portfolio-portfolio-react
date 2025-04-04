@@ -39,19 +39,19 @@ const NavBar = () => {
                     <NavLink to="/resources">
                       <div className={styles.dropdown__header}>
                         <img src={assets.folder} alt="" />
-                        <h6>Resources / Tools</h6>
+                        <span>Resources / Tools</span>
                       </div>
                       <small>Essential tools and resources for learning and productivity.</small>
                     </NavLink>
                   </li>
 
                   <li>
-                    <NavLink to="/source-code">
+                    <NavLink to="/snippets">
                       <div className={styles.dropdown__header}>
                         <img src={assets.code} alt="" />
-                        <h6>Source Code</h6>
+                        <span>Snippets</span>
                       </div>
-                      <small>Ready-to-use code snippets for your projects.</small>
+                      <small>Find helpful code snippets to develop your projects.</small>
                     </NavLink>
                   </li>
 
@@ -59,7 +59,7 @@ const NavBar = () => {
                     <NavLink to="https://blog.adilsonsonhi.com">
                       <div className={styles.dropdown__header}>
                         <img src={assets.news} alt="" />
-                        <h6>Blog</h6>
+                        <span>Blog</span>
                       </div>
                       <small>Explore insights, tutorials, and industry trends to stay ahead.</small>
                     </NavLink>
@@ -91,7 +91,7 @@ const NavBar = () => {
                 <img src={assets.row} alt="" />
               </NavLink> */}
               <Button.Link to="/contact" variant="primary" size="md" icon="row" iconPosition="right">
-                <span>Let's Chat</span>
+                <span>Contact</span>
               </Button.Link>
             </li>
 
@@ -149,13 +149,13 @@ const NavBar = () => {
                         setVisible(false);
                         toggleAccordion();
                       }}
-                      to="/source-code"
+                      to="/snippets"
                     >
                       <div className={styles.accordion__box}>
                         <img src={assets.code} alt="Code" />
-                        <h6>Source Code</h6>
+                        <h6>Snippets</h6>
                       </div>
-                      <small>Find helpful source code to develop your projects.</small>
+                      <small>Find helpful code snippets to develop your projects.</small>
                     </NavLink>
                   </li>
 

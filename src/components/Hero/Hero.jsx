@@ -25,7 +25,7 @@ const Hero = () => {
           <NavLink to="https://www.instagram.com/adilsonsonhi.websites/" target="blank">
             Instagram
           </NavLink>{" "}
-          for design insights.
+          for tech insights.
         </p>
         <ul className={styles.btn__list}>
           <li>

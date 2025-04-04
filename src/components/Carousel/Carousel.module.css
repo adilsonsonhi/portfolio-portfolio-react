@@ -35,6 +35,8 @@
   gap: 12px;
   border-radius: 20px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 24px rgba(149, 157, 165, 0.2);
+  border: 1px solid #dadadd;
   transition: transform 0.3s ease-in-out;
 }
 /* ITEM IMAGE */
@@ -66,9 +68,10 @@
 }
 /* TEXT */
 .item p {
-  -webkit-line-clamp: 3;
-  font-size: 14px;
+  -webkit-line-clamp: 2;
+  font-size: 15px;
   color: #767681;
+  color: #94959c;
 }
 .item:hover {
   transform: translateY(-20px);

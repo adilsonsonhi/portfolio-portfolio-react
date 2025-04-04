@@ -47,20 +47,16 @@
 }
 
 .webdev__features > div > div:first-child {
-  background-color: #db6400;
+  background-color: #27272a;
 
   & h5 {
-    color: #f7f7f8;
-  }
-
-  & p {
-    color: #eeeef0;
+    color: #eee;
   }
 }
 
 .webdev__features > div > div:first-child span {
-  background-color: #db6400;
-  border-color: #fff;
+  background-color: #27272a;
+  border-color: #db6400;
 }
 
 /* ----------------- */
@@ -71,13 +67,13 @@
 
 .webdev__features > div > div img,
 .uxui__features > div > div img {
-  background-color: red;
-  width: 20px;
-  height: 20px;
   position: absolute;
   right: 0;
   bottom: 0;
-  /* display: none; */
+  display: none;
+}
+.webdev__features > div > div:first-child img {
+  display: block;
 }
 
 /* ----------------- */
@@ -118,19 +114,3 @@
     -webkit-line-clamp: 3;
   }
 }
-
-/* .features > div:first-child {
-  background-color: #db6400 !important;
-}
-
-.features div:first-child h5 {
-  color: #f7f7f8;
-}
-.features div:first-child .span {
-  background-color: #db6400;
-  border-color: #fff;
-}
-
-.features div:first-child p {
-  color: #eeeef0;
-} */
