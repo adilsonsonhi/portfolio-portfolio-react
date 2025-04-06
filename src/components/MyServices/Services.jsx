@@ -3,6 +3,7 @@ import styles from "./Services.module.css";
 import Button from "../Button/Button";
 import ServiceCard from "../Card/ServiceCard";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import Heading from "../Heading/Heading";
 
 const Services = () => {
   const servicesRef = useIntersectionObserver((target) => {

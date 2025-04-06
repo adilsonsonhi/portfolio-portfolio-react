@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Mainskills.module.css";
 import { skills } from "../../assets/assets";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import Heading from "../Heading/Heading";
 
 const MainSkills = () => {
   const servicesRef = useIntersectionObserver((target) => {
@@ -13,7 +14,7 @@ const MainSkills = () => {
   return (
     <div ref={servicesRef}>
       <div className={styles.mainskills}>
-        <h2>Technologies and Tools</h2>
+        <Heading title="Technologies and Tools" />
         <ul>
           {skills.map((skill, index) => (
             <li key={index}>

@@ -2,13 +2,16 @@ import React from "react";
 import styles from "../Features/Features.module.css";
 import FeaturesCard from "../Card/FeaturesCard";
 import Button from "../Button/Button";
+import Heading from "../Heading/Heading";
 
 const Features = () => {
   return (
     <div className={styles.features__container}>
       <div className={styles.features__description}>
-        <h2>What I Build for Your Business</h2>
-        <p>From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results</p>
+        <Heading
+          title="What I Build for Your Business"
+          paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results"
+        />
       </div>
       <div className={styles.features}>
         <div className={styles.webdev__features}>
