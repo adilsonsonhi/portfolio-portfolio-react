@@ -76,17 +76,17 @@ export const assets = {
   mousecursor,
 };
 
-export const servicesArray = [
+export const Services = [
   {
     _id: "1",
-    name: "Web Systems",
+    title: "Web Systems",
     description: "Robust, scalable solutions. Complete web systems with seamless API REST integration for optimal efficiency and performance.",
     image: [service1],
     techs: [circle_react, circle_nodejs, circle_mongodb],
   },
   {
     _id: "2",
-    name: "Interface Design (UX/UI)",
+    title: "Interface Design (UX/UI)",
     description: "Engaging user experiences. Intuitive, functional interfaces that provide smooth and engaging navigation.",
     image: [service2],
     techs: [circle_figma],
@@ -96,67 +96,67 @@ export const servicesArray = [
 export const Features = [
   {
     _id: "1",
-    name: "E-commerce Solutions",
+    title: "E-commerce Solutions",
     description: "Custom online stores with payment integration, inventory management, and customer management systems.",
   },
   {
     _id: "2",
-    name: "Booking & Reservation Systems",
+    title: "Booking & Reservation Systems",
     description: "Automated booking platforms for hotels, appointments, event registrations, or table reservations at restaurants.",
   },
   {
     _id: "3",
-    name: "Custom Web Applications",
+    title: "Custom Web Applications",
     description: "Bespoke web apps tailored to specific business processes, functionalities, or customer engagement strategies.",
   },
   {
     _id: "4",
-    name: "API Integration & Development",
+    title: "API Integration & Development",
     description: "Seamlessly integrating third-party APIs (e.g., payment gateways, CRM, shipping services) for extended functionalities.",
   },
   {
     _id: "5",
-    name: "CRM Systems",
+    title: "CRM Systems",
     description: "Tailored CRM systems to manage client interactions and data throughout the customer lifecycle.",
   },
   {
     _id: "6",
-    name: "Website Maintenance",
+    title: "Website Maintenance",
     description: "Providing ongoing support, updates, and optimization to keep your site secure, fast, and functional.",
   },
 
   {
     _id: "7",
-    name: "UX/UI Design",
+    title: "UX/UI Design",
     description: "User-centered design focused on seamless interactions, with user flows, wireframes, and prototypes.",
   },
 
   {
     _id: "8",
-    name: "App Design (iOS & Android)",
+    title: "App Design (iOS & Android)",
     description: "Designing intuitive, user-friendly interfaces for mobile apps on both iOS and Android platforms.",
   },
 
   {
     _id: "9",
-    name: "Website Design",
+    title: "Website Design",
     description: "Custom web designs with focus on aesthetics, functionality, and ease of use across all devices.",
   },
 
   {
     _id: "10",
-    name: "Interactive Prototyping",
+    title: "Interactive Prototyping",
     description: "High-fidelity prototypes with interactive elements to simulate real user interactions and user flows.",
   },
 
   {
     _id: "11",
-    name: "Design System Development",
+    title: "Design System Development",
     description: "Creating consistent design systems and style guides for scalable and maintainable design across platforms.",
   },
   {
     _id: "12",
-    name: "Design for Conversion",
+    title: "Design for Conversion",
     description: "Crafting designs specifically optimized for increasing user engagement and conversion rates.",
   },
 ];

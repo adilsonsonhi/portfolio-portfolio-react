@@ -54,7 +54,7 @@
   gap: 64px;
 }
 
-.services__desc {
+.services__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,11 +62,11 @@
   text-align: center;
 }
 
-.services__container h2 {
+.services__heading h2 {
   max-width: 540px;
   opacity: 0; /* Inicialmente invisível */
 }
-.services__description {
+.services__heading p {
   max-width: 450px;
   opacity: 0; /* Inicialmente invisível */
 }
@@ -74,7 +74,7 @@
   display: grid;
   grid-template-columns: repeat(2, 372px);
   gap: 20px;
-  opacity: 0; /* Inicialmente invisível */
+  opacity: 1; /* Inicialmente invisível */
 
   & img {
     /* transition: 0.5s;

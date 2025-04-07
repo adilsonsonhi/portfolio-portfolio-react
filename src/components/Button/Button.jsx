@@ -15,7 +15,7 @@ import styles from "./Button.module.css";
  */
 const Button = ({ variant = "primary", size = "md", icon, iconPosition = "left", children, className = "", ...props }) => {
   // Combine base button class with variant, size, and any additional classes
-  const buttonClasses = `${styles.button} ${styles[variant]} ${styles[size]} ${className}`;
+  const buttonClasses = `${styles.btn} ${styles[variant]} ${styles[size]} ${className}`;
 
   // Get the icon component from assets if provided
   const Icon = icon ? assets[icon] : null;
@@ -41,7 +41,7 @@ const Button = ({ variant = "primary", size = "md", icon, iconPosition = "left",
  */
 const ButtonLink = ({ variant = "primary", size = "md", icon, iconPosition = "left", children, className = "", to, ...props }) => {
   // Combine classes same as Button component
-  const buttonClasses = `${styles.button} ${styles[variant]} ${styles[size]} ${className}`;
+  const buttonClasses = `${styles.btn} ${styles[variant]} ${styles[size]} ${className}`;
   const Icon = icon ? assets[icon] : null;
 
   return (
@@ -61,42 +61,42 @@ export default Button;
 
 {
   /* 
+  
+  <Button variant="primary" size="lg">
+    Large Button
+  </Button>
 
-<Button variant="primary" size="lg">
-  Botão Grande
-</Button>
+  <Button variant="secondary" size="md">
+    Mid Button
+  </Button>
 
-<Button variant="secondary" size="md">
-  Botão Médio
-</Button>
+  <Button variant="alternative" size="sm">
+    Small Button
+  </Button>
 
-<Button variant="alternative" size="sm">
-  Botão Pequeno
-</Button>
+  <Button>
+    Normal 
+  </Button>
 
-<Button>
-  Botão normal
-</Button>
+  <Button.Link to="/sobre">
+    About us
+  </Button.Link>
 
-<Button.Link to="/sobre">
-  Sobre nós
-</Button.Link>
+  <Button icon="whatsapp">
+    Send a Message
+  </Button>
 
-<Button icon="whatsapp">
-  Enviar mensagem
-</Button>
+  <Button icon="github" iconPosition="right">
+    See more
+  </Button>
 
-<Button icon="github" iconPosition="right">
-  Ver código
-</Button>
+  <Button.Link to="/portfolio" icon="folder">
+    Portfolio
+  </Button.Link>
 
-<Button.Link to="/portfolio" icon="folder">
-  Meu portfólio
-</Button.Link>
+  <Button variant="secondary">
+    Cancel
+  </Button>
 
-<Button variant="secondary">
-  Cancelar
-</Button>
-
-*/
+  */
 }

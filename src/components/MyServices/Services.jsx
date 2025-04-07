@@ -9,7 +9,7 @@ const Services = () => {
   const servicesRef = useIntersectionObserver((target) => {
     // Adiciona as classes de animação aos elementos
     target.querySelector(`.${styles.services__container} h2`).classList.add(styles.slideIn);
-    target.querySelector(`.${styles.services__description}`).classList.add(styles.slideIn);
+    target.querySelector(`.${styles.services__container} p`).classList.add(styles.slideIn);
     target.querySelector(`.${styles.services}`).classList.add(styles.slideIn);
     target.querySelector("button, a").classList.add(styles.slideIn);
 
@@ -23,13 +23,15 @@ const Services = () => {
   return (
     <div ref={servicesRef}>
       <div className={styles.services__container}>
-        <div className={styles.services__desc}>
-          <h2>Exploring My Expertise: What I Offer and How I Deliver Results</h2>
-          <p className={styles.services__description}>Specializing in turning ideas into impactful digital experiences, I offer two essential pillars for your project's success</p>
+        <div className={styles.services__heading}>
+          <Heading
+            title="Exploring My Expertise: What I Offer and How I Deliver Results"
+            paragraph="Specializing in turning ideas into impactful digital experiences, I offer two essential pillars for your project's success"
+          />
         </div>
         <div className={styles.services}>
-          <ServiceCard className={styles.services__item1} id="1" /> {/* Renderiza o serviço com _id: "1" */}
-          <ServiceCard className={styles.services__item2} id="2" />
+          <ServiceCard id="1" /> {/* Renderiza o serviço com _id: "1" */}
+          <ServiceCard id="2" />
         </div>
         <div>
           <Button.Link to="/contact" variant="secondary" size="lg" style={{ opacity: 0 }}>
