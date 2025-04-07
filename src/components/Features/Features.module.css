@@ -1,5 +1,6 @@
-.features__container {
-  padding: 80px 0;
+/* ========== CONTAINER & HEADINGS ========== */
+.container {
+  padding: 80px 16px;
   margin: 0 auto;
   max-width: 1240px;
   display: flex;
@@ -7,35 +8,70 @@
   align-items: center;
   gap: 64px;
 }
-.features__description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
 
-  & h2 {
-    max-width: 540px;
-  }
-
-  & p {
-    max-width: 450px;
-  }
+.heading h2 {
+  max-width: 540px;
 }
+
+.heading p {
+  max-width: 450px;
+}
+
+/* ========== FEATURES WRAPPER ========== */
 .features {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
-/* ----------------- */
-.webdev__features h5,
-.uxui__features h5 {
+/* ========== FEATURE SECTION BASE (web/design) ========== */
+.web__features,
+.design__features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.web__features > div,
+.design__features > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.web__features > div > div,
+.design__features > div > div {
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+
+.web__features h5,
+.design__features h5 {
+  padding-left: 32px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  height: auto;
   position: relative;
 }
 
-.webdev__features span,
-.uxui__features span {
+.web__features p,
+.design__features p {
+  padding-left: 32px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  height: auto;
+}
+
+.web__features span,
+.design__features span {
   position: absolute;
   top: 0.5px;
   left: 0;
@@ -43,74 +79,45 @@
   height: 20px;
   background-color: #f7f7f8;
   border: 4px solid #db6400;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
-.webdev__features > div > div:first-child {
+.features__container {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+}
+/* ========== HIGHLIGHTED FEATURE (first item) ========== */
+.web__features > div > div:first-child {
   background-color: #27272a;
-
-  & h5 {
-    color: #eee;
-  }
 }
 
-.webdev__features > div > div:first-child span {
+.web__features > div > div:first-child h5 {
+  color: #eee;
+}
+
+.web__features > div > div:first-child span {
   background-color: #27272a;
   border-color: #db6400;
 }
-
-/* ----------------- */
-.webdev__features > div > div,
-.uxui__features > div > div {
-  position: relative;
+@media only screen and (max-width: 1024px) {
+  .features__container {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
-
-.webdev__features > div > div img,
-.uxui__features > div > div img {
+@media only screen and (max-width: 768px) {
+  .features__container {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ========== IMAGE HANDLING ========== */
+.web__features > div > div img,
+.design__features > div > div img {
   position: absolute;
   right: 0;
   bottom: 0;
   display: none;
 }
-.webdev__features > div > div:first-child img {
+
+.web__features > div > div:first-child img {
   display: block;
-}
-
-/* ----------------- */
-.webdev__features,
-.uxui__features {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  & div {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    & div {
-      gap: 8px;
-    }
-  }
-
-  & h5 {
-    padding-left: 32px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: auto;
-    -webkit-line-clamp: 1;
-  }
-
-  & p {
-    padding-left: 32px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: auto;
-    -webkit-line-clamp: 3;
-  }
 }

@@ -4,4 +4,12 @@
   align-items: center;
   gap: 12px;
   text-align: center;
+
+  & h2 {
+    max-width: 540px;
+  }
+
+  & p {
+    max-width: 450px;
+  }
 }

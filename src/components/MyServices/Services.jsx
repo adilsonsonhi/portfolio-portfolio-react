@@ -34,7 +34,7 @@ const Services = () => {
           <ServiceCard id="2" />
         </div>
         <div>
-          <Button.Link to="/contact" variant="secondary" size="lg" style={{ opacity: 0 }}>
+          <Button.Link to="/contact" variant="secondary" size="md" style={{ opacity: 0 }}>
             <span>Get Started Now</span>
           </Button.Link>
         </div>

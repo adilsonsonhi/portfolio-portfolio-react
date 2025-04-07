@@ -86,10 +86,6 @@ const NavBar = () => {
         <nav className={styles.nav__container}>
           <ul className={styles.nav__list}>
             <li className={styles.nav__list__item}>
-              {/* <NavLink className={styles.contact__button} to="https://wa.me/+351933617279" target="blank">
-                <span>Let's talk</span>
-                <img src={assets.row} alt="" />
-              </NavLink> */}
               <Button.Link to="/contact" variant="primary" size="md" icon="row" iconPosition="right">
                 <span>Contact</span>
               </Button.Link>
@@ -192,7 +188,7 @@ const NavBar = () => {
           </ul>
 
           <NavLink onClick={() => setVisible(false)} to="https://wa.me/+351933617279" target="blank" className={styles.mobile__menu__btn}>
-            <span>Let's talk</span>
+            <span>Contact</span>
             <img src={assets.row} alt="" />
           </NavLink>
         </div>
