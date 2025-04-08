@@ -1,0 +1,123 @@
+/* ========== CONTAINER & HEADINGS ========== */
+.container {
+  padding: 80px 16px;
+  margin: 0 auto;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.heading h2 {
+  max-width: 540px;
+}
+
+.heading p {
+  max-width: 450px;
+}
+
+/* ========== FEATURES WRAPPER ========== */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ========== FEATURE SECTION BASE (web/design) ========== */
+.web__features,
+.design__features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.web__features > div,
+.design__features > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.web__features > div > div,
+.design__features > div > div {
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+
+.web__features h5,
+.design__features h5 {
+  padding-left: 32px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  height: auto;
+  position: relative;
+}
+
+.web__features p,
+.design__features p {
+  padding-left: 32px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  height: auto;
+}
+
+.web__features span,
+.design__features span {
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #f7f7f8;
+  border: 4px solid #db6400;
+  border-radius: 50%;
+}
+
+.features__container {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+}
+/* ========== HIGHLIGHTED FEATURE (first item) ========== */
+.web__features > div > div:first-child {
+  background-color: #27272a;
+}
+
+.web__features > div > div:first-child h5 {
+  color: #eee;
+}
+
+.web__features > div > div:first-child span {
+  background-color: #27272a;
+  border-color: #db6400;
+}
+@media only screen and (max-width: 1024px) {
+  .features__container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .features__container {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ========== IMAGE HANDLING ========== */
+.web__features > div > div img,
+.design__features > div > div img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.web__features > div > div:first-child img {
+  display: block;
+}

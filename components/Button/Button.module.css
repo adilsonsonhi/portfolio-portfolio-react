@@ -1,0 +1,104 @@
+/* 
+  Base btn styles - applied to all btn variants 
+  Features:
+  - Rounded pill shape
+  - Smooth transitions for hover effects
+  - Flex layout for icon + text alignment
+  - Consistent cursor and border styling
+*/
+.btn {
+  border-radius: 4px;
+  font-weight: 400;
+  transition: background-color 0.2s, color 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.5s;
+
+  & span {
+    padding-top: 4px;
+  }
+}
+
+/* 
+  COLOR VARIANTS 
+  Each variant defines its default and hover states
+*/
+
+/* Primary btn - main call-to-action style */
+.primary {
+  color: #f7f7f8;
+  border-color: #27272a;
+  background-color: #27272a;
+}
+
+.primary:hover {
+  background-color: #3b3c3f;
+  border-color: #3b3c3f;
+}
+
+/* Secondary btn - outlined alternative */
+.secondary {
+  color: #27272a;
+  border-color: #babbbf;
+  background-color: transparent;
+}
+
+.secondary:hover {
+  border-color: #27272a;
+}
+
+/* Alternative btn - accent color option */
+.alternative {
+  color: #f7f7f8;
+  border-color: #db6400;
+  background-color: #db6400;
+}
+
+.alternative:hover {
+  border-color: #a34909;
+  background-color: #a34909;
+}
+
+/* 
+  SIZE VARIANTS 
+  Defines dimensions for different btn sizes
+*/
+
+/* Large btn - for prominent calls-to-action */
+.lg {
+  height: 52px;
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+/* Medium btn - standard/default size */
+.md {
+  height: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Small btn - for compact spaces */
+.sm {
+  height: 32px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* 
+  ICON STYLING
+  Note: Currently using default image sizing
+  Uncomment and adjust these properties for consistent icon sizing:
+  - Fixed em-based dimensions
+  - Controlled margins
+*/
+.icon {
+  /* width: 16px;
+  height: 16px;
+  margin: 0 4px; */
+}

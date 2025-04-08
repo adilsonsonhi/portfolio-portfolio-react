@@ -1,0 +1,92 @@
+/* -------------- KEYFRAMES ANIMATION -------------- */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Classes de animação */
+.slideIn {
+  animation: slideIn 0.6s ease-out forwards;
+}
+.slideLeft {
+  animation: slideLeft 0.6s ease-out forwards;
+}
+.slideRight {
+  animation: slideRight 0.6s ease-out forwards;
+}
+
+/* Estilos base */
+.services__container {
+  padding: 80px 16px;
+  margin: 0 auto;
+  /* max-width: 910px; */
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.services__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.services__heading h2 {
+  max-width: 540px;
+  opacity: 0; /* Inicialmente invisível */
+}
+.services__heading p {
+  max-width: 450px;
+  opacity: 0; /* Inicialmente invisível */
+}
+.services {
+  /* display: grid;
+  grid-template-columns: repeat(2, 372px); */
+  display: flex;
+  gap: 20px;
+  opacity: 1; /* Inicialmente invisível */
+
+  & img {
+    /* transition: 0.5s;
+    width: 100%;
+    filter: grayscale(1); */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+  }
+}

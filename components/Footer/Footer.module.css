@@ -1,0 +1,33 @@
+.footer {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 12px;
+  border-top: 1px solid #e7eaf2;
+}
+.footer__left small {
+  font-size: 12px;
+  color: #94959c;
+}
+.footer__right ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 12px;
+
+  & li img {
+    width: 24px !important;
+  }
+
+  & li a {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: underline;
+    color: #434349;
+    font-weight: 400;
+  }
+}
