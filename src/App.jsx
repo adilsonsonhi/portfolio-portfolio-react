@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Resources from "./pages/Resources";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import SourceCode from "./pages/SourceCode";
+import Snippets from "./pages/Snippets";
 // COMPONENTS
 import NavHeader from "./components/Header/NavHeader";
 import Footer from "./components/Footer/Footer";
@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/source-code" element={<SourceCode />} />
+        <Route path="/snippets" element={<Snippets />} />
       </Routes>
       {/* FOOTER */}
       <Footer />

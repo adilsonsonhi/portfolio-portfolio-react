@@ -73,7 +73,7 @@ const NewsLetter = () => {
                     <div className={`${styles.modal} ${styles[modalType]}`}>
                       <p>{modalMessage}</p>
                       <button onClick={() => setIsModalOpen(false)} className={styles.modal__close}>
-                        Fechar
+                        Close
                       </button>
                     </div>
                   </div>

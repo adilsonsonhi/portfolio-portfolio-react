@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "./ContactForm.module.css";
+import Heading from "../Heading/Heading";
+import { NavLink } from "react-router-dom";
+import { assets } from "../../assets/assets";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -88,10 +91,10 @@ const ContactForm = () => {
       subscribe(data);
       setIsModalOpen(true);
       setModalType("sending");
-      setModalMessage("Enviando sua mensagem...");
+      setModalMessage("Sending your message...");
     } else {
       setModalType("error");
-      setModalMessage("Preencha todos os campos obrigatórios.");
+      setModalMessage("Fill in all required fields.");
       setIsModalOpen(true);
     }
   };
@@ -103,115 +106,171 @@ const ContactForm = () => {
         render={({ subscribe, status, message }) => {
           if (status === "success" || status === "error") {
             setModalType(status);
-            setModalMessage(status === "success" ? "Mensagem enviada com sucesso! 🎉" : message || "Erro ao enviar. Tente novamente.");
+            setModalMessage(status === "success" ? "Message sent successfully! 🎉" : message || "Error sending. Please try again.");
           }
 
           return (
-            <div>
-              <div>
-                <h2>Contact</h2>
-                <p>From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results</p>
-              </div>
-              <form onSubmit={(e) => handleSubmit(subscribe, e)} className={styles.form}>
-                <h2>Contact Us</h2>
-                <div className={styles.indicatesRequired}>
-                  <span className={styles.asterisk}>*</span> Campos obrigatórios
+            <div className={styles.container}>
+              <Heading title="Contact Me" paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results" />
+
+              <div className={styles.container__form}>
+                <div className={styles.left__side}>
+                  <form onSubmit={(e) => handleSubmit(subscribe, e)} className={styles.form}>
+                    <div className={styles.indicatesRequired}>
+                      <span className={styles.asterisk}>*</span> (Required fields)
+                    </div>
+
+                    <div className={styles.nameGroup}>
+                      {/* Primeiro Nome */}
+                      <div className={styles.fieldGroup}>
+                        <label htmlFor="mce-FNAME">
+                          First Name <span className={styles.asterisk}>*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="FNAME"
+                          placeholder="E.g.: João"
+                          id="mce-FNAME"
+                          value={formData.FNAME}
+                          onChange={handleChange}
+                          className={`${styles.input} ${errors.FNAME ? styles.errorInput : ""}`}
+                        />
+                        {errors.FNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
+                      </div>
+
+                      {/* Último Nome */}
+                      <div className={styles.fieldGroup}>
+                        <label htmlFor="mce-LNAME">
+                          Last Name <span className={styles.asterisk}>*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="LNAME"
+                          placeholder="E.g.: Silva"
+                          id="mce-LNAME"
+                          value={formData.LNAME}
+                          onChange={handleChange}
+                          className={`${styles.input} ${errors.LNAME ? styles.errorInput : ""}`}
+                        />
+                        {errors.LNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className={styles.fieldGroup}>
+                      <label htmlFor="mce-EMAIL">
+                        Email <span className={styles.asterisk}>*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="EMAIL"
+                        id="mce-EMAIL"
+                        placeholder="E.g.: joao.silva@email.com"
+                        value={formData.EMAIL}
+                        onChange={handleChange}
+                        className={`${styles.input} ${errors.EMAIL ? styles.errorInput : ""}`}
+                      />
+                      {errors.EMAIL && <p className={styles.errorText}>Campo obrigatório.</p>}
+                    </div>
+
+                    {/* Mensagem */}
+                    <div className={styles.fieldGroup}>
+                      <label htmlFor="mce-MESSAGE">
+                        Message <span className={styles.asterisk}>*</span>
+                      </label>
+                      <textarea
+                        name="MESSAGE"
+                        id="mce-MESSAGE"
+                        placeholder="Write your message here..."
+                        value={formData.MESSAGE}
+                        onChange={handleChange}
+                        maxLength={maxMessageLength}
+                        className={`${styles.textarea} ${errors.MESSAGE ? styles.errorInput : ""}`}
+                      />
+                      {errors.MESSAGE && <p className={styles.errorText}>Mandatory field.</p>}
+                      <div className={styles.characterCount}>
+                        {formData.MESSAGE.length}/{maxMessageLength} characters
+                      </div>
+                    </div>
+
+                    {/* Checkboxes */}
+                    <div className={styles.checkboxGroup}>
+                      <h6>
+                        Subject (Select at least 1) <span className={styles.asterisk}>*</span>
+                      </h6>
+                      {errors.checkboxes && <p className={styles.errorText}>Please select at least one option.</p>}
+                      <ul>
+                        {[
+                          { id: "website_design", label: "Website Design", value: "1" },
+                          { id: "ux_ui_design", label: "UX/UI Design", value: "2" },
+                          { id: "content_creation", label: "Content Creation", value: "4" },
+                          { id: "strategy_consulting", label: "Strategy & Consulting", value: "8" },
+                          { id: "app_development", label: "App Development", value: "16" },
+                          { id: "other", label: "Other", value: "32" },
+                        ].map((item) => (
+                          <li key={item.id}>
+                            <input type="checkbox" id={item.id} name={item.id} checked={formData[item.id]} onChange={handleChange} />
+                            <label htmlFor={item.id}>{item.label}</label>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <button type="submit" className={styles.submitButton} disabled={!isFormValid}>
+                      Submit
+                    </button>
+                  </form>
                 </div>
 
-                {/* Primeiro Nome */}
-                <div className={styles.fieldGroup}>
-                  <label htmlFor="mce-FNAME">
-                    Primeiro Nome <span className={styles.asterisk}>*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="FNAME"
-                    id="mce-FNAME"
-                    value={formData.FNAME}
-                    onChange={handleChange}
-                    className={`${styles.input} ${errors.FNAME ? styles.errorInput : ""}`}
-                  />
-                  {errors.FNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
-                </div>
-
-                {/* Último Nome */}
-                <div className={styles.fieldGroup}>
-                  <label htmlFor="mce-LNAME">
-                    Último Nome <span className={styles.asterisk}>*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="LNAME"
-                    id="mce-LNAME"
-                    value={formData.LNAME}
-                    onChange={handleChange}
-                    className={`${styles.input} ${errors.LNAME ? styles.errorInput : ""}`}
-                  />
-                  {errors.LNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
-                </div>
-
-                {/* Email */}
-                <div className={styles.fieldGroup}>
-                  <label htmlFor="mce-EMAIL">
-                    Email <span className={styles.asterisk}>*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    id="mce-EMAIL"
-                    value={formData.EMAIL}
-                    onChange={handleChange}
-                    className={`${styles.input} ${errors.EMAIL ? styles.errorInput : ""}`}
-                  />
-                  {errors.EMAIL && <p className={styles.errorText}>Campo obrigatório.</p>}
-                </div>
-
-                {/* Mensagem */}
-                <div className={styles.fieldGroup}>
-                  <label htmlFor="mce-MESSAGE">
-                    Mensagem <span className={styles.asterisk}>*</span>
-                  </label>
-                  <textarea
-                    name="MESSAGE"
-                    id="mce-MESSAGE"
-                    value={formData.MESSAGE}
-                    onChange={handleChange}
-                    maxLength={maxMessageLength}
-                    className={`${styles.textarea} ${errors.MESSAGE ? styles.errorInput : ""}`}
-                  />
-                  {errors.MESSAGE && <p className={styles.errorText}>Campo obrigatório.</p>}
-                  <div className={styles.characterCount}>
-                    {formData.MESSAGE.length}/{maxMessageLength} caracteres
-                  </div>
-                </div>
-
-                {/* Checkboxes */}
-                <div className={styles.checkboxGroup}>
-                  <strong>
-                    Serviços (Selecione pelo menos 1) <span className={styles.asterisk}>*</span>
-                  </strong>
-                  {errors.checkboxes && <p className={styles.errorText}>Selecione ao menos uma opção.</p>}
+                <div className={styles.right__side}>
                   <ul>
-                    {[
-                      { id: "website_design", label: "Website Design", value: "1" },
-                      { id: "ux_ui_design", label: "UX/UI Design", value: "2" },
-                      { id: "content_creation", label: "Content Creation", value: "4" },
-                      { id: "strategy_consulting", label: "Strategy & Consulting", value: "8" },
-                      { id: "app_development", label: "App Development", value: "16" },
-                      { id: "other", label: "Other", value: "32" },
-                    ].map((item) => (
-                      <li key={item.id}>
-                        <input type="checkbox" id={item.id} name={item.id} checked={formData[item.id]} onChange={handleChange} />
-                        <label htmlFor={item.id}>{item.label}</label>
-                      </li>
-                    ))}
+                    <li>
+                      <h6>Let's Connect</h6>
+                    </li>
+                    <li>
+                      <p>Stay in touch and reach me directly.</p>
+                    </li>
+                    <li>
+                      <NavLink>
+                        <img src={assets.message_circle} alt="" />
+                        <span>WhatsApp</span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink>
+                        <img src={assets.instagram} alt="" />
+                        <span>Instagram</span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink>
+                        <img src={assets.linkedin} alt="" />
+                        <span>LinkedIn</span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink>
+                        <img src={assets.github} alt="" />
+                        <span>Github</span>
+                      </NavLink>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <h6>Want to meet up?</h6>
+                    </li>
+                    <li>
+                      <p>Let's schedule a time to talk.</p>
+                    </li>
+                    <li>
+                      <NavLink>
+                        <img src={assets.map_pin} alt="" />
+                        <span>Avenida Praia da Vitória 19, Lisboa, PT</span>
+                      </NavLink>
+                    </li>
                   </ul>
                 </div>
-
-                <button type="submit" className={styles.submitButton} disabled={!isFormValid}>
-                  Enviar
-                </button>
-              </form>
+              </div>
 
               {/* Modal de status */}
               {isModalOpen && (
@@ -219,7 +278,7 @@ const ContactForm = () => {
                   <div className={`${styles.modal} ${styles[modalType]}`}>
                     <p>{modalMessage}</p>
                     <button onClick={() => setIsModalOpen(false)} className={styles.modalClose}>
-                      Fechar
+                      Close
                     </button>
                   </div>
                 </div>

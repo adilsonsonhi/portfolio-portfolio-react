@@ -1,11 +1,12 @@
 import React from "react";
-import PlaceHolder from "../components/PlaceHolder";
+import TabFilter from "../components/TabFilter/TabFilter";
+import NewsLetter from "../components/NewsLetter/NewsLetter";
 
 const Resources = () => {
   return (
     <div>
-      <div></div>
-      <PlaceHolder />
+      <TabFilter />
+      <NewsLetter />
     </div>
   );
 };
