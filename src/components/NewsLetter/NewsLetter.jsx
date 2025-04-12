@@ -25,7 +25,7 @@
 import React, { useState } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "../NewsLetter/NewsLetter.module.css";
-import { assets } from "../../assets/assets";
+import { assets } from "../../utils/assets";
 
 const NewsLetter = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -70,9 +70,8 @@
     align-items: center;
     gap: 8px;
     border-radius: 32px;
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
-    border: 1px solid #dadadd;
-    box-shadow: 0 0 24px rgba(149, 157, 165, 0.2);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
     transition: 0.3s;
 
     &:hover {

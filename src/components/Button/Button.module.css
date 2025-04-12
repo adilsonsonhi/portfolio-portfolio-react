@@ -1,27 +1,16 @@
-/* 
-  Base btn styles - applied to all btn variants 
-  Features:
-  - Rounded pill shape
-  - Smooth transitions for hover effects
-  - Flex layout for icon + text alignment
-  - Consistent cursor and border styling
-*/
 .btn {
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 400;
-  transition: background-color 0.2s, color 0.2s;
   outline: none;
   cursor: pointer;
   border: 1px solid;
-  border-radius: 32px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  border-radius: 2rem;
   transition: 0.5s;
-
-  & span {
-    padding-top: 4px;
-  }
+}
+.btn span {
+  padding-top: 4px;
 }
 
 /* 
@@ -31,37 +20,34 @@
 
 /* Primary btn - main call-to-action style */
 .primary {
-  color: #f7f7f8;
-  border-color: #27272a;
-  background-color: #27272a;
+  color: var(--primary-btn-text);
+  border-color: var(--primary-btn-border);
+  background-color: var(--primary-btn);
 }
-
 .primary:hover {
-  background-color: #3b3c3f;
-  border-color: #3b3c3f;
+  background-color: var(--primary-btn-hover);
+  border-color: var(--primary-btn-hover);
 }
 
 /* Secondary btn - outlined alternative */
 .secondary {
-  color: #27272a;
-  border-color: #babbbf;
-  background-color: transparent;
+  color: var(--secondary-btn-text);
+  border-color: var(--secondary-btn-border);
+  background-color: var(--secondary-btn);
 }
-
 .secondary:hover {
-  border-color: #27272a;
+  border-color: var(--secondary-btn-hover);
 }
 
-/* Alternative btn - accent color option */
-.alternative {
-  color: #f7f7f8;
-  border-color: #db6400;
-  background-color: #db6400;
+/* Tertiary btn - accent color option */
+.tertiary {
+  color: var(--tertiary-btn-text);
+  border-color: var(--tertiary-btn-border);
+  background-color: var(--tertiary-btn);
 }
-
-.alternative:hover {
-  border-color: #a34909;
-  background-color: #a34909;
+.tertiary:hover {
+  background-color: var(--tertiary-btn-hover);
+  border-color: var(--tertiary-btn-hover);
 }
 
 /* 
@@ -72,22 +58,22 @@
 /* Large btn - for prominent calls-to-action */
 .lg {
   height: 52px;
-  padding: 16px 32px;
-  font-size: 18px;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
 }
 
 /* Medium btn - standard/default size */
 .md {
   height: 40px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
 }
 
 /* Small btn - for compact spaces */
 .sm {
   height: 32px;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
 
 /* 

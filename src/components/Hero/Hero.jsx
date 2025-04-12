@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Hero.module.css";
-import { assets } from "../../assets/assets";
+import { assets } from "../../utils/assets";
 import Button from "../Button/Button";
 
 const Hero = () => {

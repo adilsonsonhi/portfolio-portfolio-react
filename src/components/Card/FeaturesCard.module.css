@@ -3,10 +3,10 @@
   width: 100%;
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid #dadadd;
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 8px;
   opacity: 1; /* Initially invisible */
-  box-shadow: 0 0 24px rgba(149, 157, 165, 0.2);
+  box-shadow: var(--shadow);
 }

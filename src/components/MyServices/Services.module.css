@@ -1,3 +1,44 @@
+/* Estilos base */
+.services__container {
+  padding: 80px 16px;
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.services__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.services__heading h2 {
+  max-width: 540px;
+  opacity: 0; /* Inicialmente invisível */
+}
+.services__heading p {
+  max-width: 450px;
+  opacity: 0; /* Inicialmente invisível */
+}
+.services {
+  display: flex;
+  gap: 20px;
+  opacity: 0; /* Inicialmente invisível */
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+  }
+}
+
 /* -------------- KEYFRAMES ANIMATION -------------- */
 @keyframes slideIn {
   from {
@@ -31,62 +72,22 @@
 }
 
 /* Classes de animação */
-.slideIn {
+.slideIn__03 {
+  animation: slideIn 0.3s ease-out forwards;
+}
+.slideIn__04 {
+  animation: slideIn 0.4s ease-out forwards;
+}
+.slideIn__06 {
   animation: slideIn 0.6s ease-out forwards;
 }
+.slideIn__09 {
+  animation: slideIn 0.9s ease-out forwards;
+}
+
 .slideLeft {
   animation: slideLeft 0.6s ease-out forwards;
 }
 .slideRight {
   animation: slideRight 0.6s ease-out forwards;
-}
-
-/* Estilos base */
-.services__container {
-  padding: 80px 16px;
-  margin: 0 auto;
-  /* max-width: 910px; */
-  max-width: 1240px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 64px;
-}
-
-.services__heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-}
-
-.services__heading h2 {
-  max-width: 540px;
-  opacity: 0; /* Inicialmente invisível */
-}
-.services__heading p {
-  max-width: 450px;
-  opacity: 0; /* Inicialmente invisível */
-}
-.services {
-  /* display: grid;
-  grid-template-columns: repeat(2, 372px); */
-  display: flex;
-  gap: 20px;
-  opacity: 1; /* Inicialmente invisível */
-
-  & img {
-    /* transition: 0.5s;
-    width: 100%;
-    filter: grayscale(1); */
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .services {
-    /* grid-template-columns: 1fr; */
-    flex-direction: column;
-  }
 }

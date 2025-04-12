@@ -8,16 +8,10 @@ import Heading from "../Heading/Heading";
 const Services = () => {
   const servicesRef = useIntersectionObserver((target) => {
     // Adiciona as classes de animação aos elementos
-    target.querySelector(`.${styles.services__container} h2`).classList.add(styles.slideIn);
-    target.querySelector(`.${styles.services__container} p`).classList.add(styles.slideIn);
-    target.querySelector(`.${styles.services}`).classList.add(styles.slideIn);
-    target.querySelector("button, a").classList.add(styles.slideIn);
-
-    // Aplica animações diferentes a cada .services__item
-    target.querySelectorAll(`ServiceCard`).forEach((item, i) => {
-      const animations = [styles.slideRight, styles.slideLeft];
-      item.classList.add(animations[i % animations.length]);
-    });
+    target.querySelector(`.${styles.services__container} h2`).classList.add(styles.slideIn__03);
+    target.querySelector(`.${styles.services__container} p`).classList.add(styles.slideIn__04);
+    target.querySelector(`.${styles.services}`).classList.add(styles.slideIn__06);
+    target.querySelector("button, a").classList.add(styles.slideIn__09);
   });
 
   return (

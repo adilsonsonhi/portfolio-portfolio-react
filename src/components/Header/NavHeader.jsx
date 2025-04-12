@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { assets } from "../../assets/assets";
+import { assets } from "../../utils/assets";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./NavHeader.module.css";
 import Button from "../Button/Button";
@@ -86,7 +86,7 @@ const NavBar = () => {
         <nav className={styles.nav__container}>
           <ul className={styles.nav__list}>
             <li className={styles.nav__list__item}>
-              <Button.Link to="/contact" variant="primary" size="md" icon="row" iconPosition="right">
+              <Button.Link to="/contact" variant="primary" size="sm" icon="row" iconPosition="right">
                 <span>Contact</span>
               </Button.Link>
             </li>

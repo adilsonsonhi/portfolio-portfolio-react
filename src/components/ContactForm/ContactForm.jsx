@@ -3,7 +3,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "./ContactForm.module.css";
 import Heading from "../Heading/Heading";
 import { NavLink } from "react-router-dom";
-import { assets } from "../../assets/assets";
+import { assets } from "../../utils/assets";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -217,7 +217,7 @@ const ContactForm = () => {
                     </div>
 
                     <button type="submit" className={styles.submitButton} disabled={!isFormValid}>
-                      Submit
+                      Send
                     </button>
                   </form>
                 </div>

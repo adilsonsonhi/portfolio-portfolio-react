@@ -47,8 +47,8 @@
   gap: 8px;
 }
 
-.web__features h5,
-.design__features h5 {
+.web__features h4,
+.design__features h4 {
   padding-left: 32px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -91,7 +91,7 @@
   background-color: #27272a;
 }
 
-.web__features > div > div:first-child h5 {
+.web__features > div > div:first-child h4 {
   color: #eee;
 }
 

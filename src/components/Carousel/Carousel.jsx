@@ -126,7 +126,7 @@ const Carousel = ({ products }) => {
               <img src={product.image[0]} alt={product.name} />
               <div className={styles.description}>
                 <h3>{product.name}</h3>
-                <h6>{product.category}</h6>
+                <h5>{product.category}</h5>
                 <p>{product.description}</p>
               </div>
             </NavLink>

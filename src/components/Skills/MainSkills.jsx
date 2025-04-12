@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Mainskills.module.css";
-import { skills } from "../../assets/assets";
+import { skills } from "../../utils/assets";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import Heading from "../Heading/Heading";
 

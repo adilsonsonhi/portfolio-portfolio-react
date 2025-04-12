@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../Card/ServiceCard.module.css"; // Scoped CSS styles for this component
-import { Services } from "../../assets/assets"; // Importing the array of service objects
+import { Services } from "../../utils/assets"; // Importing the array of service objects
 
 // Component that renders a service card based on the provided `id`
 const ServiceCard = ({ id }) => {

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { products } from "../../assets/assets";
+import { products } from "../../utils/assets";
 import PortfolioCard from "../Card/PortfolioCard";
 import styles from "./PortfolioFilter.module.css";
 import Heading from "../Heading/Heading";

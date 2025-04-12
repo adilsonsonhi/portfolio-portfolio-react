@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../Card/FeaturesCard.module.css"; // Import CSS module for scoped styles
-import { assets, Features } from "../../assets/assets"; // Import shared assets and data list
+import { assets, Features } from "../../utils/assets"; // Import shared assets and data list
 
 // Reusable card component that displays a specific feature based on the passed `id`
 const FeaturesCard = ({ id }) => {
@@ -14,10 +14,10 @@ const FeaturesCard = ({ id }) => {
 
   return (
     <div className={styles.card}>
-      <h5>
+      <h4>
         {service.title} {/* Feature title */}
         <span className={styles.span}></span> {/* Decorative or styling element */}
-      </h5>
+      </h4>
       <p>{service.description}</p> {/* Short description of the feature */}
       <img src={assets.mousecursor} alt="" /> {/* Icon or graphic related to the feature */}
     </div>

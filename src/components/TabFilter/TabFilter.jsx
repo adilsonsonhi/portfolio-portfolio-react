@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Resources } from "../../assets/assets";
+import { Resources } from "../../utils/assets";
 import ResourceCard from "../Card/ResourceCard";
 import styles from "./TabFilter.module.css";
 import Heading from "../Heading/Heading";
