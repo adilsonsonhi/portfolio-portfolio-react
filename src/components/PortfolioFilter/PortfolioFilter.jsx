@@ -3,6 +3,7 @@ import { products } from "../../utils/assets";
 import PortfolioCard from "../Card/PortfolioCard";
 import styles from "./PortfolioFilter.module.css";
 import Heading from "../Heading/Heading";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const TabFilter = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -53,26 +54,35 @@ const TabFilter = () => {
     });
   }, [activeFilter]);
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.heading}>
-        <Heading title="Discover my Latest Work" paragraph="Take a look at what I've been building — a collection of projects crafted with care, creativity, and clean code." />
-      </div>
+  const servicesRef = useIntersectionObserver((target) => {
+    // Adiciona as classes de animação aos elementos
+    target.querySelector(`.${styles.heading} h2`).classList.add(styles.slideIn__03);
+    target.querySelector(`.${styles.heading} p`).classList.add(styles.slideIn__06);
+    target.querySelector(`.${styles.filterTabs}`).classList.add(styles.slideIn__09);
+  });
 
-      <div className={styles.tabs__container}>
-        <div className={styles.filterTabs}>
-          {categories.map((category) => (
-            <button key={category} className={`${styles.tab} ${activeFilter === category ? styles.active : ""}`} onClick={() => setActiveFilter(category)}>
-              {category}
-              {activeFilter === category && <span className={styles.activeIndicator} />}
-            </button>
-          ))}
+  return (
+    <div ref={servicesRef}>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <Heading title="Portfolio" paragraph="Take a look at what I've been building — a collection of projects crafted with care, creativity, and clean code." />
         </div>
 
-        <div ref={containerRef} className={styles.resourcesGrid}>
-          {filteredProducts.map((product) => (
-            <PortfolioCard key={product._id} product={product} />
-          ))}
+        <div className={styles.tabs__container}>
+          <div className={styles.filterTabs}>
+            {categories.map((category) => (
+              <button key={category} className={`${styles.tab} ${activeFilter === category ? styles.active : ""}`} onClick={() => setActiveFilter(category)}>
+                {category}
+                {activeFilter === category && <span className={styles.activeIndicator} />}
+              </button>
+            ))}
+          </div>
+
+          <div ref={containerRef} className={styles.resourcesGrid}>
+            {filteredProducts.map((product) => (
+              <PortfolioCard key={product._id} product={product} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

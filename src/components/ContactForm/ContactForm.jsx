@@ -4,6 +4,7 @@ import styles from "./ContactForm.module.css";
 import Heading from "../Heading/Heading";
 import { NavLink } from "react-router-dom";
 import { assets } from "../../utils/assets";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -99,6 +100,14 @@ const ContactForm = () => {
     }
   };
 
+  const servicesRef = useIntersectionObserver((target) => {
+    // Adiciona as classes de animação aos elementos
+    target.querySelector(`.${styles.heading} h2`).classList.add(styles.slideIn__03);
+    target.querySelector(`.${styles.heading} p`).classList.add(styles.slideIn__06);
+    target.querySelector(`.${styles.form}`).classList.add(styles.slideIn__09);
+    target.querySelector(`.${styles.right__side}`).classList.add(styles.slideIn__12);
+  });
+
   return (
     <div className={styles.contactForm__container}>
       <MailchimpSubscribe
@@ -110,179 +119,183 @@ const ContactForm = () => {
           }
 
           return (
-            <div className={styles.container}>
-              <Heading title="Contact Me" paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results" />
-
-              <div className={styles.container__form}>
-                <div className={styles.left__side}>
-                  <form onSubmit={(e) => handleSubmit(subscribe, e)} className={styles.form}>
-                    <div className={styles.indicatesRequired}>
-                      <span className={styles.asterisk}>*</span> (Required fields)
-                    </div>
-
-                    <div className={styles.nameGroup}>
-                      {/* Primeiro Nome */}
-                      <div className={styles.fieldGroup}>
-                        <label htmlFor="mce-FNAME">
-                          First Name <span className={styles.asterisk}>*</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="FNAME"
-                          placeholder="E.g.: João"
-                          id="mce-FNAME"
-                          value={formData.FNAME}
-                          onChange={handleChange}
-                          className={`${styles.input} ${errors.FNAME ? styles.errorInput : ""}`}
-                        />
-                        {errors.FNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
-                      </div>
-
-                      {/* Último Nome */}
-                      <div className={styles.fieldGroup}>
-                        <label htmlFor="mce-LNAME">
-                          Last Name <span className={styles.asterisk}>*</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="LNAME"
-                          placeholder="E.g.: Silva"
-                          id="mce-LNAME"
-                          value={formData.LNAME}
-                          onChange={handleChange}
-                          className={`${styles.input} ${errors.LNAME ? styles.errorInput : ""}`}
-                        />
-                        {errors.LNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
-                      </div>
-                    </div>
-
-                    {/* Email */}
-                    <div className={styles.fieldGroup}>
-                      <label htmlFor="mce-EMAIL">
-                        Email <span className={styles.asterisk}>*</span>
-                      </label>
-                      <input
-                        type="email"
-                        name="EMAIL"
-                        id="mce-EMAIL"
-                        placeholder="E.g.: joao.silva@email.com"
-                        value={formData.EMAIL}
-                        onChange={handleChange}
-                        className={`${styles.input} ${errors.EMAIL ? styles.errorInput : ""}`}
-                      />
-                      {errors.EMAIL && <p className={styles.errorText}>Campo obrigatório.</p>}
-                    </div>
-
-                    {/* Mensagem */}
-                    <div className={styles.fieldGroup}>
-                      <label htmlFor="mce-MESSAGE">
-                        Message <span className={styles.asterisk}>*</span>
-                      </label>
-                      <textarea
-                        name="MESSAGE"
-                        id="mce-MESSAGE"
-                        placeholder="Write your message here..."
-                        value={formData.MESSAGE}
-                        onChange={handleChange}
-                        maxLength={maxMessageLength}
-                        className={`${styles.textarea} ${errors.MESSAGE ? styles.errorInput : ""}`}
-                      />
-                      {errors.MESSAGE && <p className={styles.errorText}>Mandatory field.</p>}
-                      <div className={styles.characterCount}>
-                        {formData.MESSAGE.length}/{maxMessageLength} characters
-                      </div>
-                    </div>
-
-                    {/* Checkboxes */}
-                    <div className={styles.checkboxGroup}>
-                      <h6>
-                        Subject (Select at least 1) <span className={styles.asterisk}>*</span>
-                      </h6>
-                      {errors.checkboxes && <p className={styles.errorText}>Please select at least one option.</p>}
-                      <ul>
-                        {[
-                          { id: "website_design", label: "Website Design", value: "1" },
-                          { id: "ux_ui_design", label: "UX/UI Design", value: "2" },
-                          { id: "content_creation", label: "Content Creation", value: "4" },
-                          { id: "strategy_consulting", label: "Strategy & Consulting", value: "8" },
-                          { id: "app_development", label: "App Development", value: "16" },
-                          { id: "other", label: "Other", value: "32" },
-                        ].map((item) => (
-                          <li key={item.id}>
-                            <input type="checkbox" id={item.id} name={item.id} checked={formData[item.id]} onChange={handleChange} />
-                            <label htmlFor={item.id}>{item.label}</label>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <button type="submit" className={styles.submitButton} disabled={!isFormValid}>
-                      Send
-                    </button>
-                  </form>
+            <div ref={servicesRef}>
+              <div className={styles.container}>
+                <div className={styles.heading}>
+                  <Heading title="Contact Me" paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results" />
                 </div>
 
-                <div className={styles.right__side}>
-                  <ul>
-                    <li>
-                      <h6>Let's Connect</h6>
-                    </li>
-                    <li>
-                      <p>Stay in touch and reach me directly.</p>
-                    </li>
-                    <li>
-                      <NavLink>
-                        <img src={assets.message_circle} alt="" />
-                        <span>WhatsApp</span>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink>
-                        <img src={assets.instagram} alt="" />
-                        <span>Instagram</span>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink>
-                        <img src={assets.linkedin} alt="" />
-                        <span>LinkedIn</span>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink>
-                        <img src={assets.github} alt="" />
-                        <span>Github</span>
-                      </NavLink>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <h6>Want to meet up?</h6>
-                    </li>
-                    <li>
-                      <p>Let's schedule a time to talk.</p>
-                    </li>
-                    <li>
-                      <NavLink>
-                        <img src={assets.map_pin} alt="" />
-                        <span>Avenida Praia da Vitória 19, Lisboa, PT</span>
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                <div className={styles.container__form}>
+                  <div className={styles.left__side}>
+                    <form onSubmit={(e) => handleSubmit(subscribe, e)} className={styles.form}>
+                      <div className={styles.indicatesRequired}>
+                        <span className={styles.asterisk}>*</span> (Required fields)
+                      </div>
 
-              {/* Modal de status */}
-              {isModalOpen && (
-                <div className={styles.modalOverlay}>
-                  <div className={`${styles.modal} ${styles[modalType]}`}>
-                    <p>{modalMessage}</p>
-                    <button onClick={() => setIsModalOpen(false)} className={styles.modalClose}>
-                      Close
-                    </button>
+                      <div className={styles.nameGroup}>
+                        {/* Primeiro Nome */}
+                        <div className={styles.fieldGroup}>
+                          <label htmlFor="mce-FNAME">
+                            First Name <span className={styles.asterisk}>*</span>
+                          </label>
+                          <input
+                            type="text"
+                            name="FNAME"
+                            placeholder="E.g.: João"
+                            id="mce-FNAME"
+                            value={formData.FNAME}
+                            onChange={handleChange}
+                            className={`${styles.input} ${errors.FNAME ? styles.errorInput : ""}`}
+                          />
+                          {errors.FNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
+                        </div>
+
+                        {/* Último Nome */}
+                        <div className={styles.fieldGroup}>
+                          <label htmlFor="mce-LNAME">
+                            Last Name <span className={styles.asterisk}>*</span>
+                          </label>
+                          <input
+                            type="text"
+                            name="LNAME"
+                            placeholder="E.g.: Silva"
+                            id="mce-LNAME"
+                            value={formData.LNAME}
+                            onChange={handleChange}
+                            className={`${styles.input} ${errors.LNAME ? styles.errorInput : ""}`}
+                          />
+                          {errors.LNAME && <p className={styles.errorText}>Campo obrigatório.</p>}
+                        </div>
+                      </div>
+
+                      {/* Email */}
+                      <div className={styles.fieldGroup}>
+                        <label htmlFor="mce-EMAIL">
+                          Email <span className={styles.asterisk}>*</span>
+                        </label>
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          id="mce-EMAIL"
+                          placeholder="E.g.: joao.silva@email.com"
+                          value={formData.EMAIL}
+                          onChange={handleChange}
+                          className={`${styles.input} ${errors.EMAIL ? styles.errorInput : ""}`}
+                        />
+                        {errors.EMAIL && <p className={styles.errorText}>Campo obrigatório.</p>}
+                      </div>
+
+                      {/* Mensagem */}
+                      <div className={styles.fieldGroup}>
+                        <label htmlFor="mce-MESSAGE">
+                          Message <span className={styles.asterisk}>*</span>
+                        </label>
+                        <textarea
+                          name="MESSAGE"
+                          id="mce-MESSAGE"
+                          placeholder="Write your message here..."
+                          value={formData.MESSAGE}
+                          onChange={handleChange}
+                          maxLength={maxMessageLength}
+                          className={`${styles.textarea} ${errors.MESSAGE ? styles.errorInput : ""}`}
+                        />
+                        {errors.MESSAGE && <p className={styles.errorText}>Mandatory field.</p>}
+                        <div className={styles.characterCount}>
+                          {formData.MESSAGE.length}/{maxMessageLength} characters
+                        </div>
+                      </div>
+
+                      {/* Checkboxes */}
+                      <div className={styles.checkboxGroup}>
+                        <h6>
+                          Subject (Select at least 1) <span className={styles.asterisk}>*</span>
+                        </h6>
+                        {errors.checkboxes && <p className={styles.errorText}>Please select at least one option.</p>}
+                        <ul>
+                          {[
+                            { id: "website_design", label: "Website Design", value: "1" },
+                            { id: "ux_ui_design", label: "UX/UI Design", value: "2" },
+                            { id: "content_creation", label: "Content Creation", value: "4" },
+                            { id: "strategy_consulting", label: "Strategy & Consulting", value: "8" },
+                            { id: "app_development", label: "App Development", value: "16" },
+                            { id: "other", label: "Other", value: "32" },
+                          ].map((item) => (
+                            <li key={item.id}>
+                              <input type="checkbox" id={item.id} name={item.id} checked={formData[item.id]} onChange={handleChange} />
+                              <label htmlFor={item.id}>{item.label}</label>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <button type="submit" className={styles.submitButton} disabled={!isFormValid}>
+                        Send
+                      </button>
+                    </form>
+                  </div>
+
+                  <div className={styles.right__side}>
+                    <ul>
+                      <li>
+                        <h6>Let's Connect</h6>
+                      </li>
+                      <li>
+                        <p>Stay in touch and reach me directly.</p>
+                      </li>
+                      <li>
+                        <NavLink>
+                          <img src={assets.message_circle} alt="" />
+                          <span>WhatsApp</span>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink>
+                          <img src={assets.instagram} alt="" />
+                          <span>Instagram</span>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink>
+                          <img src={assets.linkedin} alt="" />
+                          <span>LinkedIn</span>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink>
+                          <img src={assets.github} alt="" />
+                          <span>Github</span>
+                        </NavLink>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <h6>Want to meet up?</h6>
+                      </li>
+                      <li>
+                        <p>Let's schedule a time to talk.</p>
+                      </li>
+                      <li>
+                        <NavLink>
+                          <img src={assets.map_pin} alt="" />
+                          <span>Avenida Praia da Vitória 19, Lisboa, PT</span>
+                        </NavLink>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              )}
+
+                {/* Modal de status */}
+                {isModalOpen && (
+                  <div className={styles.modalOverlay}>
+                    <div className={`${styles.modal} ${styles[modalType]}`}>
+                      <p>{modalMessage}</p>
+                      <button onClick={() => setIsModalOpen(false)} className={styles.modalClose}>
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           );
         }}

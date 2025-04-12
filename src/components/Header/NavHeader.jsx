@@ -187,7 +187,7 @@ const NavBar = () => {
             </li>
           </ul>
 
-          <NavLink onClick={() => setVisible(false)} to="https://wa.me/+351933617279" target="blank" className={styles.mobile__menu__btn}>
+          <NavLink onClick={() => setVisible(false)} to="/contact" className={styles.mobile__menu__btn}>
             <span>Contact</span>
             <img src={assets.row} alt="" />
           </NavLink>

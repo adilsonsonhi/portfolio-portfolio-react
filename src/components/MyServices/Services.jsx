@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Services.module.css";
 import Button from "../Button/Button";
 import ServiceCard from "../Card/ServiceCard";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import Heading from "../Heading/Heading";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const Services = () => {
   const servicesRef = useIntersectionObserver((target) => {

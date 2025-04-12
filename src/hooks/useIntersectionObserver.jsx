@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const useIntersectionObserver = (callback, options = { threshold: 0.6 }) => {
+const useIntersectionObserver = (callback, options = { threshold: 0.25 }) => {
   const ref = useRef(null);
 
   useEffect(() => {

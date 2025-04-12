@@ -166,6 +166,7 @@ overlay: 0 0 40px rgba(0, 0, 0, 0.2)
 /* Body styling */
 body {
   font-family: "Helvetica-Neue", sans-serif;
+  font-size: 16px;
 }
 /* Header styling */
 h1,
@@ -187,16 +188,17 @@ h2 {
   font-size: 36px;
 }
 h3 {
-  font-size: 28px;
-}
-h4 {
   font-size: 24px;
 }
-h5 {
+h4 {
   font-size: 20px;
 }
-h6 {
+h5 {
   font-size: 18px;
+  font-weight: 400;
+}
+h6 {
+  font-size: 16px;
   font-weight: 400;
 }
 /* Remove default list styles */

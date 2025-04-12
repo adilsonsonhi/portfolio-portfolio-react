@@ -4,12 +4,25 @@
   align-items: center;
   gap: 12px;
   text-align: center;
+}
+.heading h2 {
+  max-width: 540px;
+}
 
-  & h2 {
-    max-width: 540px;
+.heading p {
+  max-width: 450px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* TITLE */
+  .heading h2 {
+    font-size: 32px;
   }
+}
 
-  & p {
-    max-width: 450px;
+@media only screen and (max-width: 539px) {
+  /* TITLE */
+  .heading h2 {
+    font-size: 28px;
   }
 }
