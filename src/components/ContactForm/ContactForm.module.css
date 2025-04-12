@@ -72,7 +72,7 @@
 .textarea {
   margin-top: 12px;
   width: 100%;
-  min-height: 40px;
+  min-height: 44px;
   padding: 10px 20px;
   border: 1px solid #babbbf;
   border-radius: 32px;
@@ -185,7 +185,7 @@
 .submitButton {
   width: 100%;
   padding: 10px 20px;
-  height: 40px;
+  height: 44px;
   background-color: #27272a;
   color: white;
   border: none;

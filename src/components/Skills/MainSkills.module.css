@@ -34,7 +34,12 @@
 .mainskills li:hover {
   transform: translateY(-4px);
 }
-&.mainskills li span {
+.mainskills li img {
+  height: 24px;
+  height: 20px;
+  /* height: 16px; */
+}
+.mainskills li span {
   padding-top: 4px;
 }
 

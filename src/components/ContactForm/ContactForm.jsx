@@ -19,6 +19,7 @@ const ContactForm = () => {
     app_development: false,
     other: false,
   });
+
   const [errors, setErrors] = useState({
     FNAME: false,
     LNAME: false,
@@ -26,6 +27,7 @@ const ContactForm = () => {
     MESSAGE: false,
     checkboxes: false,
   });
+
   const [isFormValid, setIsFormValid] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
@@ -122,7 +124,7 @@ const ContactForm = () => {
             <div ref={servicesRef}>
               <div className={styles.container}>
                 <div className={styles.heading}>
-                  <Heading title="Contact Me" paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results" />
+                  <Heading title="Contact" paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results" />
                 </div>
 
                 <div className={styles.container__form}>

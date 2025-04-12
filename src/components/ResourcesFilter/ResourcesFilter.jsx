@@ -1,18 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Portfolio } from "../../utils/assets"; // Alterado de products para Portfolio
-import PortfolioCard from "../Card/PortfolioCard";
-import styles from "./PortfolioFilter.module.css";
+import { Resources } from "../../utils/assets";
+import ResourceCard from "../Card/ResourceCard";
+import styles from "./ResourcesFilter.module.css";
 import Heading from "../Heading/Heading";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
-const TabFilter = () => {
+const ResourcesFilter = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const containerRef = useRef(null);
 
-  const categories = ["All", ...new Set(Portfolio.map((p) => p.category))]; // Alterado de products para Portfolio
+  // Extrai categorias únicas
+  const categories = ["All", ...new Set(Resources.map((r) => r.category))];
 
-  const filteredPortfolio = activeFilter === "All" ? Portfolio : Portfolio.filter((p) => p.category === activeFilter); // Alterado de products/filteredProducts para Portfolio/filteredPortfolio
+  // Filtra recursos
+  const filteredResources = activeFilter === "All" ? Resources : Resources.filter((r) => r.category === activeFilter);
 
+  // Animação FLIP
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -65,7 +68,7 @@ const TabFilter = () => {
     <div ref={servicesRef}>
       <div className={styles.container}>
         <div className={styles.heading}>
-          <Heading title="Portfolio" paragraph="Take a look at what I've been building — a collection of projects crafted with care, creativity, and clean code." />
+          <Heading title="Resources / Tools" paragraph="Discover top resources to enhance your development process and elevate your projects and career." />
         </div>
 
         <div className={styles.tabs__container}>
@@ -79,13 +82,9 @@ const TabFilter = () => {
           </div>
 
           <div ref={containerRef} className={styles.resourcesGrid}>
-            {filteredPortfolio.map(
-              (
-                item // Alterado de filteredProducts para filteredPortfolio e product para item
-              ) => (
-                <PortfolioCard key={item._id} product={item} /> // Alterado de product para item (opcional - mantenha se o prop ainda se chamar 'product')
-              )
-            )}
+            {filteredResources.map((resource) => (
+              <ResourceCard key={resource._id} resource={resource} />
+            ))}
           </div>
         </div>
       </div>
@@ -93,4 +92,4 @@ const TabFilter = () => {
   );
 };
 
-export default TabFilter;
+export default ResourcesFilter;
