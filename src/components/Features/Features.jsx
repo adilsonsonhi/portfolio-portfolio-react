@@ -21,7 +21,7 @@ const Features = () => {
         <div className={styles.heading}>
           <Heading
             title="What I Build for Your Business"
-            paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results"
+            paragraph="Whether you're launching a product, optimizing an existing platform, or crafting a new user experience — I turn your goals into high-performing digital solutions."
           />
         </div>
 

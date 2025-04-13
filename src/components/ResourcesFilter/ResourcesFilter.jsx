@@ -68,7 +68,7 @@ const ResourcesFilter = () => {
     <div ref={servicesRef}>
       <div className={styles.container}>
         <div className={styles.heading}>
-          <Heading title="Resources / Tools" paragraph="Discover top resources to enhance your development process and elevate your projects and career." />
+          <Heading title="Resources / Tools" paragraph="Discover top resources to enhance your development process and elevate your projects." />
         </div>
 
         <div className={styles.tabs__container}>

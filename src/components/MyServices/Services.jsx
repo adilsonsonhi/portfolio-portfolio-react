@@ -19,9 +19,13 @@ const Services = () => {
       <div className={styles.services__container}>
         <div className={styles.services__heading}>
           <Heading
-            title="Exploring My Expertise: What I Offer and How I Deliver Results"
-            paragraph="Specializing in turning ideas into impactful digital experiences, I offer two essential pillars for your project's success"
+            title="What I Do: Strategic Design Meets Scalable Development"
+            paragraph="I specialize in turning ideas into intuitive digital experiences that drive results. My work is rooted in two core strengths that bring real value to your project:"
           />
+          {/* <Heading
+            title="I Build Web Systems That Scale & Interfaces People Love"
+            paragraph="I specialize in transforming ideas into impactful digital experiences, delivering success through"
+          /> */}
         </div>
         <div className={styles.services}>
           <ServiceCard id="1" /> {/* Renderiza o serviço com _id: "1" */}
@@ -29,7 +33,7 @@ const Services = () => {
         </div>
         <div>
           <Button.Link to="/contact" variant="secondary" size="md" style={{ opacity: 0 }}>
-            <span>Get Started Now</span>
+            <span>Build Your Vision</span>
           </Button.Link>
         </div>
       </div>

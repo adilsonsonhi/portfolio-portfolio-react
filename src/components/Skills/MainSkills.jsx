@@ -14,7 +14,7 @@ const MainSkills = () => {
   return (
     <div ref={servicesRef}>
       <div className={styles.mainskills}>
-        <Heading title="Technologies and Tools" />
+        <Heading title="The Stack Behind the Magic" />
         <ul>
           {skills.map((skill, index) => (
             <li key={index}>

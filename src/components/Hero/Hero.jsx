@@ -20,32 +20,33 @@ const Hero = () => {
         <div className={styles.container__user}>
           <img width={"60"} src={assets.profile_pic} alt="" />
           <span>
-            Hi, I'm Adilson! <br />A <strong>Web Developer</strong> & <strong>Designer</strong> at <strong>📍 Lisbon</strong>
+            Hey, I'm Adilson! <br />A <strong>Web Developer</strong> & <strong>Designer</strong> based in <strong>📍 Lisbon</strong>
           </span>
         </div>
-        <h1>Building Concepts into Seamless Digital Experiences</h1>
+        <h1>I Turn Concepts into Powerful Interfaces that drive Sales</h1>
 
         <p>
-          With 6+ years of experience, I build web applications and craft impactful designs. Connect with me on{" "}
+          With over 6 years merging design and code to build seamless UX and robust web apps. From startups to scaling businesses, I combine creativity with technical precision.
+          Connect on{" "}
           <NavLink to="https://www.linkedin.com/in/adilsonsonhi/" target="blank">
             LinkedIn
           </NavLink>{" "}
           and{" "}
           <NavLink to="https://www.instagram.com/adilsonsonhi.websites/" target="blank">
             Instagram
-          </NavLink>{" "}
-          for tech insights.
+          </NavLink>
+          .
         </p>
 
         <ul className={styles.btn__list}>
           <li>
             <Button.Link to="/contact" variant="primary" size="lg">
-              <span>Get Started Now</span>
+              <span>Start Your Project</span>
             </Button.Link>
           </li>
           <li>
             <Button.Link to="/portfolio" variant="secondary" size="lg">
-              <span>Explore Portfolio</span>
+              <span>See My Portfolio</span>
             </Button.Link>
           </li>
         </ul>

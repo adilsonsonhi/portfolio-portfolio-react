@@ -5,7 +5,7 @@ import styles from "./PortfolioFilter.module.css";
 import Heading from "../Heading/Heading";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
-const TabFilter = () => {
+const PortfolioFilter = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const containerRef = useRef(null);
 
@@ -93,4 +93,4 @@ const TabFilter = () => {
   );
 };
 
-export default TabFilter;
+export default PortfolioFilter;
