@@ -245,27 +245,21 @@ const ContactForm = () => {
                         <p>Stay in touch and reach me directly.</p>
                       </li>
                       <li>
-                        <NavLink>
+                        <NavLink to="https://wa.me/+351933617279" target="_blank">
                           <img src={assets.message_circle} alt="" />
                           <span>WhatsApp</span>
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink>
+                        <NavLink to="https://www.instagram.com/adilsonsonhi.pt/" target="_blank">
                           <img src={assets.instagram} alt="" />
                           <span>Instagram</span>
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink>
+                        <NavLink to="https://www.linkedin.com/in/adilsonsonhi/" target="_blank">
                           <img src={assets.linkedin} alt="" />
                           <span>LinkedIn</span>
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink>
-                          <img src={assets.github} alt="" />
-                          <span>Github</span>
                         </NavLink>
                       </li>
                     </ul>
@@ -277,9 +271,9 @@ const ContactForm = () => {
                         <p>Let's schedule a time to talk.</p>
                       </li>
                       <li>
-                        <NavLink>
+                        <NavLink to="https://maps.app.goo.gl/df9VWRfRHQQ2aqrf7" target="_blank">
                           <img src={assets.map_pin} alt="" />
-                          <span>Avenida Praia da Vitória 19, Lisboa, PT</span>
+                          <span>Av. Praia da Vitória, Lisbon, Portugal</span>
                         </NavLink>
                       </li>
                     </ul>

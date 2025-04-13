@@ -34,7 +34,7 @@ const Features = () => {
               <FeaturesCard id="3" />
               <FeaturesCard id="4" />
               <FeaturesCard id="5" />
-              <FeaturesCard id="5" />
+              <FeaturesCard id="6" />
             </div>
           </div>
           <div className={styles.design__features}>
@@ -52,7 +52,7 @@ const Features = () => {
 
         <div className={styles.btn__container}>
           <Button.Link to="/contact" variant="secondary" size="md">
-            <span>Get Started Now</span>
+            <span>Let’s Work Together</span>
           </Button.Link>
         </div>
       </div>
