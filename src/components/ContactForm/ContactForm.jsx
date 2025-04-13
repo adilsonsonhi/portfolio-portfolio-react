@@ -124,7 +124,7 @@ const ContactForm = () => {
             <div ref={servicesRef}>
               <div className={styles.container}>
                 <div className={styles.heading}>
-                  <Heading title="Contact" paragraph="From sleek designs to seamless functionality, I ensure your online platform reflects your vision and drives results" />
+                  <Heading title="Contact" paragraph="Got a project or idea in mind? I'd love to hear about it. Feel free to reach out and let's create something awesome." />
                 </div>
 
                 <div className={styles.container__form}>
