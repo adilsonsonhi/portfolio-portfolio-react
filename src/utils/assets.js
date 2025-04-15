@@ -133,14 +133,16 @@ export const Services = [
   {
     _id: "1",
     title: "Web Systems",
-    description: "Robust, scalable solutions. Complete web systems with seamless API REST integration for optimal efficiency and performance.",
+    // description: "Robust, scalable solutions. Complete web systems with seamless API REST integration for optimal efficiency and performance.",
+    description: "I build scalable web systems with clean architecture and reliable APIs, ready to grow with your business, not break it.",
     image: [service1],
     techs: [circle_react, circle_nodejs, circle_mongodb],
   },
   {
     _id: "2",
-    title: "Interface Design (UX/UI)",
-    description: "Engaging user experiences. Intuitive, functional interfaces that provide smooth and engaging navigation.",
+    title: "UX/UI Design",
+    // description: "Engaging user experiences. Intuitive, functional interfaces that provide smooth and engaging navigation.",
+    description: "I create aesthetic user interfaces that people want to use, beautiful, intuitive and crafted with empathy.",
     image: [service2],
     techs: [circle_figma],
   },
@@ -219,7 +221,7 @@ export const products = [
     _id: "1",
     name: "Personal Portfolio Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
+      "A responsive portfolio built with HTML, CSS, JavaScript, and Firebase. It reflects my style, showcases my projects, and offers a smooth user experience across devices.",
     image: [p_img1],
     techs: ["a", "b", "c"],
     category: "Web Dev",
@@ -229,7 +231,7 @@ export const products = [
     _id: "2",
     name: "E-commerce Mobile App Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
+      "A clean, user-friendly shopping app focused on intuitive navigation and seamless interactions. Designed with modern UI/UX principles to make buying feel easy and enjoyable.",
     image: [p_img2],
     techs: ["a", "b", "c"],
     category: "Mobile Design",
@@ -239,22 +241,12 @@ export const products = [
     _id: "3",
     name: "Idealista MarketPlace [Redesign]",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
+      "A fresh take on the Idealista platform. This redesign simplifies the user journey with a clean layout and improved usability for browsing, listing, and finding properties.",
     image: [p_img3],
     techs: ["a", "b", "c"],
     category: "Mobile Design",
     link: "https://www.figma.com/design/P7dQidEgx4qtxoRz3uBuXq/Idealista---MarketPlace?node-id=1-5&t=8spIvEfDbEsxoGHt-1",
   },
-  // {
-  //   _id: "4",
-  //   name: "Idealista MarketPlace [Redesign]",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
-  //   image: [p_img4],
-  //   techs: ["a", "b", "c"],
-  //   category: "Web Design",
-  //   link: "https://www.adilsonsonhi.com",
-  // },
 ];
 
 export const skills = [
@@ -292,8 +284,9 @@ export const Resources = [
     icon: codepen,
     title: "Code Pen",
     subtitle: "Online Tool",
-    description: "The best place to build, test, and discover front-end code. CodePen is a social development environment for front-end designers and developers.",
-    link: "#",
+    description:
+      "A live coding environment where you can write HTML, CSS, and JavaScript with real-time preview. Ideal for rapid prototyping, experimenting with UI concepts, or showcasing interactive snippets",
+    link: "https://codepen.io/pen/",
   },
   {
     _id: "2",
@@ -301,8 +294,8 @@ export const Resources = [
     icon: colorhunt,
     title: "Color Hunter",
     subtitle: "Color palette",
-    description: "Color Palettes for Designers and Artists: Explore the latest hand-picked palettes on Color Hunt, curated for creative inspiration.",
-    link: "#",
+    description: "Color Palettes for Designers and Artists. Explore the latest hand-picked palettes on Color Hunt, curated for creative inspiration.",
+    link: "https://colorhunt.co/",
   },
   {
     _id: "3",
@@ -311,7 +304,7 @@ export const Resources = [
     title: "CSS Tricks",
     subtitle: "Web tutorials",
     description: "A hub for web developers offering expert tutorials and tools focused on mastering CSS, HTML, and JavaScript.",
-    link: "#",
+    link: "https://css-tricks.com/",
   },
   {
     _id: "4",
@@ -320,7 +313,7 @@ export const Resources = [
     title: "Dribbble",
     subtitle: "Design Hub",
     description: "Dribbble is a community for designers to showcase their work, find inspiration, and connect with others in the creative industry.",
-    link: "#",
+    link: "https://dribbble.com/",
   },
   {
     _id: "5",
@@ -329,7 +322,7 @@ export const Resources = [
     title: "Emmet Cheat Sheet",
     subtitle: "VS Code Extension",
     description: "Emmet is a plugin for many popular text editors which greatly improves HTML & CSS workflow.",
-    link: "#",
+    link: "https://docs.emmet.io/cheat-sheet/",
   },
   {
     _id: "6",
@@ -338,7 +331,7 @@ export const Resources = [
     title: "Firebase",
     subtitle: "BaaS",
     description: "Services for building and managing web and mobile applications, including real-time databases, authentication, and hosting.",
-    link: "#",
+    link: "https://firebase.google.com/",
   },
   {
     _id: "7",
@@ -347,7 +340,7 @@ export const Resources = [
     title: "Free Formatter",
     subtitle: "Online tool",
     description: "Website offering free online tools for developers, including formatters, validators, minifiers, escapers, encoders, decoders, digesters, and web resources.",
-    link: "#",
+    link: "https://www.freeformatter.com/",
   },
   {
     _id: "8",
@@ -356,7 +349,7 @@ export const Resources = [
     title: "Google Analytics",
     subtitle: "Performance",
     description: "Google tool that tracks and reports website traffic, user behavior, and performance metrics to help analyze and optimize online presence.",
-    link: "#",
+    link: "https://analytics.google.com/",
   },
   {
     _id: "9",
@@ -365,7 +358,7 @@ export const Resources = [
     title: "Hostinger",
     subtitle: "Hosting",
     description: "The best web hosting provider offering affordable hosting services, including shared hosting, VPS, cloud hosting, and domain registration.",
-    link: "#",
+    link: "https://www.hostinger.com/",
   },
   {
     _id: "10",
@@ -374,7 +367,7 @@ export const Resources = [
     title: "Iconify",
     subtitle: "Icons",
     description: "All popular icon sets, one framework. Over 200,000 open source vector icons.",
-    link: "#",
+    link: "https://iconify.design/",
   },
   {
     _id: "11",
@@ -383,16 +376,16 @@ export const Resources = [
     title: "Mockup Plugin (Figma)",
     subtitle: "Mockups",
     description: "Library of high-quality, finely-detailed device and branding mockups for all your projects.",
-    link: "#",
+    link: "https://mockup-plugin.ls.graphics/",
   },
   {
     _id: "12",
     category: "Design/Media",
-    icon: google_analytics,
+    icon: muzli,
     title: "Muzli",
     subtitle: "Design inspiration",
     description: "Muzli is a new-tab browser extension that instantly delivers relevant design stories and inspiration to keep you in the loop.",
-    link: "#",
+    link: "https://muz.li/",
   },
   {
     _id: "13",
@@ -401,7 +394,7 @@ export const Resources = [
     title: "PageSpeed Insights",
     subtitle: "Performance",
     description: "Google tool that analyzes web page performance and suggests improvements for faster loading.",
-    link: "#",
+    link: "https://pagespeed.web.dev/",
   },
   {
     _id: "14",
@@ -410,7 +403,7 @@ export const Resources = [
     title: "Pexels",
     subtitle: "Free stock photos & videos",
     description: "Free stock photos & videos you can use everywhere. Browse millions of high-quality royalty free stock images & copyright free pictures.",
-    link: "#",
+    link: "https://www.pexels.com/",
   },
   {
     _id: "15",
@@ -419,7 +412,7 @@ export const Resources = [
     title: "Pixabay",
     subtitle: "Free stock photos, videos and more",
     description: "Over 4.9 million+ high quality stock images, videos and music shared by our talented community.",
-    link: "#",
+    link: "https://pixabay.com/",
   },
   {
     _id: "16",
@@ -428,7 +421,7 @@ export const Resources = [
     title: "Prettier",
     subtitle: "VSCode Plugin",
     description: "Prettier is a code formatter that automatically formats code to ensure consistency across projects, supporting various languages like JavaScript, CSS, and HTML.",
-    link: "#",
+    link: "https://prettier.io/",
   },
   {
     _id: "17",
@@ -437,7 +430,7 @@ export const Resources = [
     title: "UI Colors",
     subtitle: "Color palette",
     description: "A comprehensive collection of UI color palettes, providing developers and designers with curated color schemes for creating visually appealing interfaces.",
-    link: "#",
+    link: "https://uicolors.app/",
   },
   {
     _id: "18",
@@ -446,7 +439,7 @@ export const Resources = [
     title: "uiGradients",
     subtitle: "Color palette",
     description: "A handpicked collection of beautiful color gradients for designers and developers.",
-    link: "#",
+    link: "https://uigradients.com/",
   },
   {
     _id: "19",
@@ -455,7 +448,7 @@ export const Resources = [
     title: "Unsplash",
     subtitle: "Free stock photos & videos",
     description: "Beautiful, free images and photos that you can download and use for any project. Better than any royalty free or stock photos.",
-    link: "#",
+    link: "https://unsplash.com/",
   },
   {
     _id: "20",
@@ -464,7 +457,7 @@ export const Resources = [
     title: "Vercel",
     subtitle: "Hosting",
     description: "Cloud platform for deploying and hosting web applications, offering features like automatic scaling, serverless functions, and fast global CDN delivery.",
-    link: "#",
+    link: "https://vercel.com/",
   },
 ];
 
@@ -473,7 +466,7 @@ export const Portfolio = [
     _id: "1",
     name: "Personal Portfolio Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
+      "A responsive portfolio built with HTML, CSS, JavaScript, and Firebase. It reflects my style, showcases my projects, and offers a smooth user experience across devices.",
     image: [p_img1],
     techs: ["a", "b", "c"],
     category: "Web Dev",
@@ -483,7 +476,7 @@ export const Portfolio = [
     _id: "2",
     name: "E-commerce Mobile App Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
+      "A clean, user-friendly shopping app focused on intuitive navigation and seamless interactions. Designed with modern UI/UX principles to make buying feel easy and enjoyable.",
     image: [p_img2],
     techs: ["a", "b", "c"],
     category: "Mobile Design",
@@ -493,7 +486,7 @@ export const Portfolio = [
     _id: "3",
     name: "Idealista MarketPlace [Redesign]",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dignissimos! Exercitationem dolores, debitis a mollitia neque eum incidunt consequatur in ratione facilis temporibus aut optio repellendus voluptatibus soluta ea blanditiis.",
+      "A fresh take on the Idealista platform. This redesign simplifies the user journey with a clean layout and improved usability for browsing, listing, and finding properties.",
     image: [p_img3],
     techs: ["a", "b", "c"],
     category: "Mobile Design",
